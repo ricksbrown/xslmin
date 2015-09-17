@@ -1,4 +1,4 @@
-package com.googlecode.monkeybrown.xslmin;
+package com.github.ricksbrown.xslmin;
 
 import javax.xml.xpath.XPathConstants;
 
@@ -14,6 +14,8 @@ public class XslLocalParamRenamerTest extends TestCase
 	private static final String LOCAL_PARAM_XPATH = "//xsl:template/descendant::xsl:param";
 
 	private boolean hasRun = false;
+
+	@Override
 	public void setUp()
 	{
 		if(!hasRun)

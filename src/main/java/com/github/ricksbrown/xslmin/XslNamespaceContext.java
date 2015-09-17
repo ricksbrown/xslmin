@@ -1,4 +1,4 @@
-package com.googlecode.monkeybrown.xslmin;
+package com.github.ricksbrown.xslmin;
 
 import java.util.Iterator;
 

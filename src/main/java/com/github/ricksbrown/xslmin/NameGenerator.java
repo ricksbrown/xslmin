@@ -1,4 +1,4 @@
-package com.googlecode.monkeybrown.xslmin;
+package com.github.ricksbrown.xslmin;
 
 /**
  * Generates short names/identifiers which are unique in the given Scope.
