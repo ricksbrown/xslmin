@@ -9,6 +9,15 @@
 	to help getting handles on specific elements for the tests.
 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:preserve-space elements="abbrev 
+								abbrev-journal-title
+								access-date
+								addr-line"/>
+	<xsl:strip-space elements="foo
+        bar
+        banana
+        peel"/>
+	
 	<xsl:variable name="globalShadow" handle="def1">
 		<xsl:value-of select="barfoo"/><!-- Must remain first global var -->
 	</xsl:variable>

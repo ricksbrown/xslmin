@@ -1,4 +1,4 @@
-package com.googlecode.monkeybrown.xslmin;
+package com.github.ricksbrown.xslmin;
 
 import javax.xml.xpath.XPathExpressionException;
 import org.w3c.dom.Document;

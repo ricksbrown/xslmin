@@ -1,4 +1,4 @@
-package com.googlecode.monkeybrown.xslmin;
+package com.github.ricksbrown.xslmin;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import org.w3c.dom.NodeList;
 
 /**
  *
- * @author prrbcl
+ * @author Rick Brown
  */
 public class XslNamedTemplateRenamerTest extends TestCase
 {
