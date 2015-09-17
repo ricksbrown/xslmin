@@ -13,6 +13,47 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	
+	<description>
+		An XSLT 1.0 minifier
+		A tool to minify an XSL file so that it is as compact as possible.
+		The primary goal of this tool is to compress XSL files used in client side XSLT in web browsers.
+	</description>
+	
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>9</version>
+	</parent>
+
+	<licenses>
+		<license>
+			<name>GPLv3</name>
+			<url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
+			<distribution>manual</distribution>
+			<comments>GNU General Public License</comments>
+		</license>
+	</licenses>
+	
+	<scm>
+		<url>https://github.com/ricksbrown/xslmin</url>
+		<connection>scm:git:https://github.com/ricksbrown/xslmin.git</connection>
+		<developerConnection>scm:git:https://github.com/ricksbrown/xslmin.git</developerConnection>
+		<tag>xslmin-2.3.0</tag>
+	</scm>
+
+	<developers>
+		<developer>
+			<id>ricksbrown</id>
+			<name>Rick Brown</name>
+			<email>ricksbrown73@gmail.com</email>
+			<roles>
+				<role>Project Owner</role>
+				<role>Developer</role>
+			</roles>
+		</developer>
+	</developers>
+
 
 	<dependencies>
 		<dependency>
@@ -66,4 +107,43 @@
 			</plugin>
 		</plugins>
 	</build>
+	<profiles>
+		<profile>
+			<id>release-sign-artifacts</id>
+			<activation>
+				<property>
+					<name>performRelease</name>
+					<value>true</value>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.6</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
 </project>
